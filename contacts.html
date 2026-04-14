@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finns — Contacts</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="inner-page">
+  <div class="page page-inner">
+    <div class="bg-base"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-vignette"></div>
+    <div class="bg-darken"></div>
+
+    <div class="orb orb-top"></div>
+    <div class="orb orb-bottom"></div>
+    <div class="orb-bridge"></div>
+    <div class="center-glow"></div>
+
+    <header class="header reveal reveal-1">
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <span>Finns</span>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Login</a>
+        <a href="#" class="nav-btn online-btn" id="onlineBtn">
+          <span class="online-dot"></span>
+          <span>Online: <span id="onlineCount">0</span></span>
+        </a>
+      </nav>
+    </header>
+
+    <main class="inner-main">
+      <section class="page-section contacts-layout">
+        <div class="contacts-info reveal reveal-2">
+          <span class="section-kicker">Contacts</span>
+          <h1>Contact Finns team</h1>
+          <p>
+            Reach out to us with any question about banking products, profiles or card applications.
+          </p>
+
+          <div class="contact-list-box">
+            <div class="contact-item">
+              <span>Address</span>
+              <b>Amsterdam Finance District, 12</b>
+            </div>
+
+            <div class="contact-item">
+              <span>Phone</span>
+              <b>+31 20 555 01 25</b>
+            </div>
+
+            <div class="contact-item">
+              <span>Email</span>
+              <b>support@finns.com</b>
+            </div>
+
+            <div class="contact-item">
+              <span>Working Hours</span>
+              <b>Mon – Fri / 09:00 – 18:00</b>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card reveal reveal-3">
+          <span class="section-kicker">Request Form</span>
+          <h2>Send us a message</h2>
+
+          <form class="auth-form" action="#" method="post">
+            <div class="form-group">
+              <label for="contact-name">Your name</label>
+              <input type="text" id="contact-name" name="name" placeholder="Enter your name" />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" placeholder="Enter your email" />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="6" placeholder="Write your message"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo">
+        <div class="logo-mark"></div>
+        <span>Finns</span>
+      </div>
+
+      <p class="footer-text">
+        A modern finance platform built to help users track assets, manage budgets
+        and explore smart banking products with ease.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">Product</div>
+      <a href="index.html">Overview</a>
+      <a href="catalog.html">Cards</a>
+      <a href="profile.html">Profile</a>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">Company</div>
+      <a href="contacts.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">Documents</div>
+      <a href="documents.html">Privacy Policy</a>
+      <a href="documents.html">Terms of Use</a>
+      <a href="documents.html">Data Processing</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Finns</span>
+    <span>All rights reserved</span>
+  </div>
+</footer>
+  </div>
+
+  <div class="online-modal" id="onlineModal">
+    <div class="online-modal-backdrop" id="onlineModalBackdrop"></div>
+
+    <div class="online-modal-box">
+      <div class="online-modal-head">
+        <h3>Users online</h3>
+        <button class="online-close" id="onlineCloseBtn" type="button">×</button>
+      </div>
+
+      <div class="online-modal-count">
+        Total online: <span id="modalOnlineCount">0</span>
+      </div>
+
+      <ul class="online-users-list" id="onlineUsersList">
+        <li class="online-empty">No users online</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
